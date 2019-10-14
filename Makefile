@@ -1,6 +1,8 @@
 all: opensource-ami
 
-opensource-ami: _assets_
+opensource-ami: diablo.exe diabdat.mpq tools _assets_
+
+tools: mpq mpqfix cel_dump min_dump til_dump dun_dump dun_merge miniset_dump
 
 # Final output of game assets.
 
@@ -44,9 +46,9 @@ _dump_/_dungeons_/tristram/sector4s.tmx: diabdat | dun_dump
 
 # Minisets (miniature set levels).
 
-dump_minisets: _dump_/_minisets_/stair_up2.tmx
+dump_minisets: _dump_/_minisets_/catacombs/vert_arch40.tmx
 
-_dump_/_minisets_/stair_up2.tmx: diablo.exe | miniset_dump
+_dump_/_minisets_/catacombs/vert_arch40.tmx: diablo.exe | miniset_dump
 	@echo "===> Extracting minisets."
 	miniset_dump diablo.exe
 
@@ -71,7 +73,7 @@ diabdat: diabdat.mpq | mpq mpqfix
 clean:
 	$(RM) -v -r _dump_ _assets_
 
-.PHONY: all clean dump_cels dump_mins dump_tils dump_duns dump_minisets post_process mpq mpqfix cel_dump min_dump til_dump dun_dump dun_merge
+.PHONY: all clean dump_cels dump_mins dump_tils dump_duns dump_minisets post_process tools mpq mpqfix cel_dump min_dump til_dump dun_dump dun_merge
 
 # DIABDAT.MPQ archive.
 
