@@ -4,7 +4,21 @@ opensource-ami: _assets_
 
 # Final output of game assets.
 
-_assets_: _dump_
+_assets_: _dump_ _extra_
+
+# Post-processed raw game assets.
+
+_extra_: _dump_/_dungeons_/tristram/tristram.tmx
+
+_dump_/_dungeons_/tristram/tristram.tmx: _extra_/levels/towndata/tristram.dun | dun_dump
+	dun_dump _extra_/levels/towndata/tristram.dun
+
+_extra_/levels/towndata/tristram.dun: dump_duns | dun_merge
+	@echo "===> Post-processing raw game assets."
+	mkdir -p _extra_/levels/towndata
+	dun_merge -output _extra_/levels/towndata/tristram.dun diabdat/levels/towndata/sector{1,2,3,4}s.dun
+
+tristram.tmx:
 
 # Raw dump of game assets.
 
@@ -50,9 +64,9 @@ diabdat: diabdat.mpq | mpq mpqfix
 	mpqfix -mpqdump $@
 
 clean:
-	$(RM) -v -r _dump_ _assets_
+	$(RM) -v -r _dump_ _extra_ _assets_
 
-.PHONY: all clean dump_cels dump_mins dump_tils dump_duns mpq mpqfix cel_dump min_dump til_dump dun_dump
+.PHONY: all clean dump_cels dump_mins dump_tils dump_duns mpq mpqfix cel_dump min_dump til_dump dun_dump dun_merge
 
 # DIABDAT.MPQ archive.
 
@@ -70,6 +84,7 @@ diabdat.mpq:
 mpq:
 	@if ! which $@ &> /dev/null ; then                                                      \
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
+		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
 		echo "   go get github.com/sanctuary/mpq";                                           \
 		echo;                                                                                \
@@ -79,6 +94,7 @@ mpq:
 mpqfix:
 	@if ! which $@ &> /dev/null ; then                                                      \
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
+		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
 		echo "   github.com/mewrnd/blizzconv/cmd/mpqfix";                                    \
 		echo;                                                                                \
@@ -88,6 +104,7 @@ mpqfix:
 cel_dump:
 	@if ! which $@ &> /dev/null ; then                                                      \
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
+		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
 		echo "   go get github.com/sanctuary/formats/cmd/cel_dump";                          \
 		echo;                                                                                \
@@ -97,6 +114,7 @@ cel_dump:
 min_dump:
 	@if ! which $@ &> /dev/null ; then                                                      \
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
+		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
 		echo "   go get github.com/sanctuary/formats/cmd/min_dump";                          \
 		echo;                                                                                \
@@ -106,6 +124,7 @@ min_dump:
 til_dump:
 	@if ! which $@ &> /dev/null ; then                                                      \
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
+		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
 		echo "   go get github.com/sanctuary/formats/cmd/til_dump";                          \
 		echo;                                                                                \
@@ -115,8 +134,19 @@ til_dump:
 dun_dump:
 	@if ! which $@ &> /dev/null ; then                                                      \
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
+		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
 		echo "   go get github.com/sanctuary/formats/cmd/dun_dump";                          \
+		echo;                                                                                \
+		exit 1;                                                                              \
+	fi
+
+dun_merge:
+	@if ! which $@ &> /dev/null ; then                                                      \
+		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
+		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
+		echo;                                                                                \
+		echo "   go get github.com/sanctuary/formats/cmd/dun_merge";                         \
 		echo;                                                                                \
 		exit 1;                                                                              \
 	fi
