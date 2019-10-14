@@ -219,10 +219,10 @@ func dump(mpqDir, exePath, outputDir string) error {
 		{addr: d1exe.L3Stalactite3Addr, tmxName: "stalactite3.tmx", dtype: enum.DTypeCaves},
 		{addr: d1exe.L3Stalactite6Addr, tmxName: "stalactite6.tmx", dtype: enum.DTypeCaves},
 		{addr: d1exe.L3Stalactite7Addr, tmxName: "stalactite7.tmx", dtype: enum.DTypeCaves},
-		{addr: d1exe.L3Stalactite8Addr, tmxName: "stalactite8.tmx", dtype: enum.DTypeCaves},
-		{addr: d1exe.L3Stalactite9Addr, tmxName: "stalactite9.tmx", dtype: enum.DTypeCaves},
-		{addr: d1exe.L3Stalactite10Addr, tmxName: "stalactite10.tmx", dtype: enum.DTypeCaves},
-		{addr: d1exe.L3Stalactite11Addr, tmxName: "stalactite11.tmx", dtype: enum.DTypeCaves},
+		{addr: d1exe.L3Stalactite8Addr, tmxName: "stalactite8.tmx", dtype: enum.DTypeCaves},   // -> stalacmite (grows from floor up)
+		{addr: d1exe.L3Stalactite9Addr, tmxName: "stalactite9.tmx", dtype: enum.DTypeCaves},   // -> stalacmite (grows from floor up)
+		{addr: d1exe.L3Stalactite10Addr, tmxName: "stalactite10.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
+		{addr: d1exe.L3Stalactite11Addr, tmxName: "stalactite11.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
 		{addr: d1exe.L3Stalactite12Addr, tmxName: "stalactite12.tmx", dtype: enum.DTypeCaves},
 		{addr: d1exe.L3Stalactite13Addr, tmxName: "stalactite13.tmx", dtype: enum.DTypeCaves},
 		{addr: d1exe.L3Crevice1Addr, tmxName: "crevice1.tmx", dtype: enum.DTypeCaves},
