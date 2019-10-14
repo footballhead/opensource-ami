@@ -81,7 +81,7 @@ diabdat.mpq:
 	@if [ ! -f $@ ]; then                                                                          \
 		echo "Unable to locate \"$@\". Please copy \"$@\" to this directory or provide a symlink."; \
 		echo;                                                                                       \
-		echo "   ln -s /path/to/$@ .";                                                     \
+		echo "   ln -s /path/to/$@ .";                                                              \
 		echo;                                                                                       \
 		exit 1;                                                                                     \
 	fi;
@@ -89,12 +89,12 @@ diabdat.mpq:
 # DIABLO.EXE executable.
 
 diablo.exe:
-	@if [ ! -f $@ ]; then                                                                          \
+	@if [ ! -f $@ ]; then                                                                                   \
 		echo "Unable to locate \"$@\" (v1.09b). Please copy \"$@\" to this directory or provide a symlink."; \
-		echo;                                                                                       \
-		echo "   ln -s /path/to/$@ .";                                                     \
-		echo;                                                                                       \
-		exit 1;                                                                                     \
+		echo;                                                                                                \
+		echo "   ln -s /path/to/$@ .";                                                                       \
+		echo;                                                                                                \
+		exit 1;                                                                                              \
 	fi;
 
 # Tools.
@@ -114,7 +114,7 @@ mpqfix:
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
 		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
-		echo "   go get github.com/mewrnd/blizzconv/cmd/mpqfix";                                    \
+		echo "   go get github.com/mewrnd/blizzconv/cmd/mpqfix";                             \
 		echo;                                                                                \
 		exit 1;                                                                              \
 	fi
