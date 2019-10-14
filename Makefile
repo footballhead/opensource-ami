@@ -114,7 +114,7 @@ mpqfix:
 		echo "Unable to locate the \"$@\" command in PATH. Please install the \"$@\" tool."; \
 		echo "Also, remember to add GOPATH/bin to PATH.";                                    \
 		echo;                                                                                \
-		echo "   github.com/mewrnd/blizzconv/cmd/mpqfix";                                    \
+		echo "   go get github.com/mewrnd/blizzconv/cmd/mpqfix";                                    \
 		echo;                                                                                \
 		exit 1;                                                                              \
 	fi
