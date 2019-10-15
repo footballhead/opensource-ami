@@ -15,6 +15,7 @@ EVAL_RHS := $(foreach TOOL, $(TOOLS), \
 )
 
 _assets_: _dump_
+	echo "Copying game assets to \"$@\" directory."
 	./copy_assets.sh
 
 # Raw dump of game assets.
@@ -55,9 +56,9 @@ _dump_/_dungeons_/tristram/sector4s.tmx: diabdat
 
 # Minisets (miniature set levels).
 
-dump_minisets: _dump_/_minisets_/hell/stairs_up.tmx
+dump_minisets: _dump_/_minisets_/hell/l4ustairs.tmx
 
-_dump_/_minisets_/hell/stairs_up.tmx: diablo.exe
+_dump_/_minisets_/hell/l4ustairs.tmx: diablo.exe
 	@echo "===> Extracting minisets."
 	miniset_dump diablo.exe
 
