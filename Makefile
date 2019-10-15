@@ -15,7 +15,7 @@ EVAL_RHS := $(foreach TOOL, $(TOOLS), \
 )
 
 _assets_: _dump_
-	echo "Copying game assets to \"$@\" directory."
+	@echo "===> Copying game assets to \"$@\" directory."
 	./copy_assets.sh
 
 # Raw dump of game assets.
