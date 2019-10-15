@@ -15,6 +15,7 @@ EVAL_RHS := $(foreach TOOL, $(TOOLS), \
 )
 
 _assets_: _dump_
+	./copy_assets.sh
 
 # Raw dump of game assets.
 
