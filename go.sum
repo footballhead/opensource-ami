@@ -75,6 +75,8 @@ github.com/sanctuary/djavul v0.0.0-20191013230622-78bb24fe19b6/go.mod h1:ZmqqLVi
 github.com/sanctuary/formats v0.0.0-20190111201442-38e89599af2a/go.mod h1:706XH9lE/rlE1G491hCSHvu6bEUzagh2anTLpCIPcxU=
 github.com/sanctuary/formats v0.0.0-20191014181639-be9b4b652596 h1:idEhT2JfHB/0HUHLO+p5ilRmeteew5O9DjbOTE8xkHU=
 github.com/sanctuary/formats v0.0.0-20191014181639-be9b4b652596/go.mod h1:1s3fqGcu4FHB8WjHeMX6sGwCRAB41lqXFG/LxHDK0rw=
+github.com/sanctuary/formats v0.0.0-20191019005449-64ff915982e0 h1:z/6hQHhiNju8F7vO49PBKTwlLG7RSBN2/ZJhMDaEI1M=
+github.com/sanctuary/formats v0.0.0-20191019005449-64ff915982e0/go.mod h1:1s3fqGcu4FHB8WjHeMX6sGwCRAB41lqXFG/LxHDK0rw=
 github.com/sanctuary/mpq v0.0.0-20190709072604-c5c1c5c9f89c h1:LRIaWwQd4wM9NU3yR0VywJH3AN5ttgk+6JQqi3qHZi0=
 github.com/sanctuary/mpq v0.0.0-20190709072604-c5c1c5c9f89c/go.mod h1:ZppEccztDLl66tn+Meb87+kfYTwhKAXR2drSiXSq2ek=
 github.com/sergi/go-diff v1.0.0/go.mod h1:0CfEIISq7TuYL3j771MWULgwwjU+GofnZX9QAmXWZgo=
