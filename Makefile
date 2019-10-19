@@ -68,7 +68,7 @@ post_process: dump_duns _dump_/_dungeons_/tristram/tristram.tmx
 
 _dump_/levels/towndata/tristram.dun:
 	@echo "===> Post-processing raw game assets."
-	dun_merge -output _dump_/levels/towndata/tristram.dun diabdat/levels/towndata/sector{1,2,3,4}s.dun
+	dun_merge -output _dump_/levels/towndata/tristram.dun diabdat/levels/towndata/sector1s.dun diabdat/levels/towndata/sector2s.dun diabdat/levels/towndata/sector3s.dun diabdat/levels/towndata/sector4s.dun
 
 _dump_/_dungeons_/tristram/tristram.tmx: _dump_/levels/towndata/tristram.dun
 	dun_dump _dump_/levels/towndata/tristram.dun
