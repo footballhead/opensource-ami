@@ -62,8 +62,8 @@ github.com/mewkiz/pkg v0.0.0-20190919212034-518ade7978e2 h1:EyTNMdePWaoWsRSGQnXi
 github.com/mewkiz/pkg v0.0.0-20190919212034-518ade7978e2/go.mod h1:3E2FUC/qYUfM8+r9zAwpeHJzqRVVMIYnpzD/clwWxyA=
 github.com/mewmew/float v0.0.0-20181121163145-c0f786d7da73/go.mod h1:obQBs6O+vjhgOZLkGdALxItKw4xrI49lSBEnAMO6lWI=
 github.com/mewrev/pe v0.0.0-20181024063030-8f6d1d7d219c/go.mod h1:j2bWMf/wUNeLV/IHgoCdLiulUruBpCmuP6wGmhQxZOA=
-github.com/mewrnd/blizzconv v0.0.0-20181025095215-33951c740a2c h1:s+LD4H1ixtVzqNTuQG6aHWr4D3X/yPkq243kr0SBfh8=
-github.com/mewrnd/blizzconv v0.0.0-20181025095215-33951c740a2c/go.mod h1:kqQEdB90rRAjiUnzI/rgZfNjGIOvvb+acxbQUqZE/bE=
+github.com/mewrnd/blizzconv v0.0.0-20191109060643-b497f47d5a2f h1:OQFESjboafHi7J3IuNnrfXjzMnYxyuYkRCik3RF1JxU=
+github.com/mewrnd/blizzconv v0.0.0-20191109060643-b497f47d5a2f/go.mod h1:kqQEdB90rRAjiUnzI/rgZfNjGIOvvb+acxbQUqZE/bE=
 github.com/mewspring/tools v0.0.0-20181204020634-6c6637dc82b6/go.mod h1:UAdVbSksr+7Bg+z4mga16OaBg3qAcgdaF3x3AeqJHEs=
 github.com/mewspring/tools v0.0.0-20190326052302-906fcc68b3d8/go.mod h1:UAdVbSksr+7Bg+z4mga16OaBg3qAcgdaF3x3AeqJHEs=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
@@ -73,8 +73,6 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/sanctuary/djavul v0.0.0-20191013230622-78bb24fe19b6 h1:S3ecAa1I4r+uS4omK94giZMXluHPpoOVE0d6R17kaGI=
 github.com/sanctuary/djavul v0.0.0-20191013230622-78bb24fe19b6/go.mod h1:ZmqqLVizXX1GVGvLAT/BPFseoDU1O5kWgY5RDOkJIq4=
 github.com/sanctuary/formats v0.0.0-20190111201442-38e89599af2a/go.mod h1:706XH9lE/rlE1G491hCSHvu6bEUzagh2anTLpCIPcxU=
-github.com/sanctuary/formats v0.0.0-20191014181639-be9b4b652596 h1:idEhT2JfHB/0HUHLO+p5ilRmeteew5O9DjbOTE8xkHU=
-github.com/sanctuary/formats v0.0.0-20191014181639-be9b4b652596/go.mod h1:1s3fqGcu4FHB8WjHeMX6sGwCRAB41lqXFG/LxHDK0rw=
 github.com/sanctuary/formats v0.0.0-20191019005449-64ff915982e0 h1:z/6hQHhiNju8F7vO49PBKTwlLG7RSBN2/ZJhMDaEI1M=
 github.com/sanctuary/formats v0.0.0-20191019005449-64ff915982e0/go.mod h1:1s3fqGcu4FHB8WjHeMX6sGwCRAB41lqXFG/LxHDK0rw=
 github.com/sanctuary/mpq v0.0.0-20190709072604-c5c1c5c9f89c h1:LRIaWwQd4wM9NU3yR0VywJH3AN5ttgk+6JQqi3qHZi0=
