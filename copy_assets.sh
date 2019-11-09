@@ -144,6 +144,8 @@ cp _dump_/_dungeons_/hell/warlord2.tmx _assets_/_maps_/hell/warlord_of_blood_pre
 
 mkdir -p _assets_/_minisets_/cathedral
 
+# Diablo 1.09b.
+#
 # * stairsup.tmx   -> stairs_up1.tmx
 # * l5stairsup.tmx -> stairs_up2.tmx
 # * stairsdown.tmx -> stairs_down.tmx
@@ -155,6 +157,16 @@ cp _dump_/_minisets_/cathedral/l5stairsup.tmx _assets_/_minisets_/cathedral/stai
 cp _dump_/_minisets_/cathedral/stairsdown.tmx _assets_/_minisets_/cathedral/stairs_down.tmx
 cp _dump_/_minisets_/cathedral/lamps.tmx      _assets_/_minisets_/cathedral/candlestick.tmx
 cp _dump_/_minisets_/cathedral/pwaterin.tmx   _assets_/_minisets_/cathedral/stairs_down_poison.tmx
+
+# Diablo pre-release-demo [dalpha] (1996-08-17).
+#
+# * alpha4_sarc.tmx      -> sarcophagus.tmx
+# * alpha4_rcorridor.tmx -> right_corridor.tmx
+# * alpha4_lcorridor.tmx -> left_corridor.tmx
+
+cp _dump_/_minisets_/cathedral/alpha4_sarc.tmx      _assets_/_minisets_/cathedral/sarcophagus.tmx
+cp _dump_/_minisets_/cathedral/alpha4_rcorridor.tmx _assets_/_minisets_/cathedral/right_corridor.tmx
+cp _dump_/_minisets_/cathedral/alpha4_lcorridor.tmx _assets_/_minisets_/cathedral/left_corridor.tmx
 
 # --- [ Catacombs ] ------------------------------------------------------------
 

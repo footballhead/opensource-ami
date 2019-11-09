@@ -24,11 +24,24 @@ var (
 	warn = log.New(os.Stderr, term.RedBold("d1exe:")+" ", 0)
 )
 
+// DiabloVersion specifies the diablo.exe version.
+type DiabloVersion uint8
+
+// Diablo.exe versions.
+const (
+	// Diablo 1.09 or 1.09b.
+	DiabloVersion109 DiabloVersion = iota + 1
+	// Diablo pre-release-demo [dalpha] (1996-08-17).
+	DiabloVersionAlpha4
+)
+
 // Executable provides access to information stored within the diablo.exe
 // executable.
 type Executable struct {
 	// Miniset DUN files.
 	Minisets map[uint32]*miniset.Miniset
+	// Diablo.exe version.
+	Version DiabloVersion
 
 	// Underlying file of the executable.
 	file *bin.File
@@ -44,6 +57,7 @@ func ParseFile(exePath string) (*Executable, error) {
 	}
 	// Sanity check.
 	sum := fmt.Sprintf("%040x", sha1.Sum(buf))
+	var ver DiabloVersion
 	switch sum {
 	case "accedfe32775d4a1984451309608c2a2d39ad406":
 		// v1.00dbg, not supported.
@@ -63,15 +77,23 @@ func ParseFile(exePath string) (*Executable, error) {
 	case "2119e1c8b818c27a06948979560cdeb4bec9ae65":
 		// v1.09, supported.
 		dbg.Printf("supported version of diablo.exe (v1.09)")
+		ver = DiabloVersion109
 	case "ebaee2acb462a0ae9c895a0e33079c94796cb0b6":
 		// v1.09b, supported.
 		dbg.Printf("supported version of diablo.exe (v1.09b)")
+		ver = DiabloVersion109
 	case "e59538ac8de87063e5d3e921a0c5d629e8d54c4e":
 		// v1.09b (no CD), supported.
 		dbg.Printf("supported version of diablo.exe (v1.09b (no CD))")
+		ver = DiabloVersion109
 	case "a024b35350f94959e6c5e2b7e042da1289d9ee79":
 		// v1.09b (AJenbo), supported.
 		dbg.Printf("supported version of diablo.exe (v1.09b (AJenbo))")
+		ver = DiabloVersion109
+	case "e516c0192fcc7758febbc95e5fd5a89a75d30b2d":
+		// pre-release-demo [dalpha] (1996-08-17)
+		dbg.Printf("supported version of diablo.exe (pre-release-demo [dalpha] (1996-08-17))")
+		ver = DiabloVersionAlpha4
 	default:
 		return nil, errors.Errorf("support for parsing diablo.exe with SHA1 hashsum `%s` not yet implemented", sum)
 	}
@@ -82,6 +104,7 @@ func ParseFile(exePath string) (*Executable, error) {
 	}
 	exe := &Executable{
 		Minisets: make(map[uint32]*miniset.Miniset),
+		Version:  ver,
 		file:     file,
 	}
 	// Parse miniset DUN files.
