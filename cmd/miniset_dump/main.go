@@ -421,6 +421,8 @@ func dump(mpqDir, exePath, outputDir string) error {
 			{addr: d1exe.L3Alpha4Stalactite4Addr, tmxName: "alpha4_l3tite4.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
 			{addr: d1exe.L3Alpha4Stalactite5Addr, tmxName: "alpha4_l3tite5.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
 			// l4 minisets (extra).
+			// NOTE: these minisets are broken, as the Diablo pre-release [dalpha] used
+			// different tile ID enums than Diablo 1.09b.
 			{addr: d1exe.L4Alpha4StairsUpAddr, tmxName: "alpha4_l4ustairs.tmx", dtype: enum.DTypeHell},
 			{addr: d1exe.L4Alpha4StairsDownAddr, tmxName: "alpha4_l4dstairs.tmx", dtype: enum.DTypeHell},
 		}
