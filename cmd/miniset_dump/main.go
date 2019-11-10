@@ -98,13 +98,13 @@ func dump(mpqDir, exePath, outputDir string) error {
 	switch exe.Version {
 	case d1exe.DiabloVersion109:
 		minisetInfos = []MinisetInfo{
-			// l1.
+			// l1 minisets.
 			{addr: d1exe.L1StairsUp1Addr, tmxName: "stairsup.tmx", dtype: enum.DTypeCathedral},
 			{addr: d1exe.L1StairsUp2Addr, tmxName: "l5stairsup.tmx", dtype: enum.DTypeCathedral},
 			{addr: d1exe.L1StairsDownAddr, tmxName: "stairsdown.tmx", dtype: enum.DTypeCathedral},
 			{addr: d1exe.L1CandlestickAddr, tmxName: "lamps.tmx", dtype: enum.DTypeCathedral},
 			{addr: d1exe.L1StairsDownPoisonAddr, tmxName: "pwaterin.tmx", dtype: enum.DTypeCathedral},
-			// l2.
+			// l2 minisets.
 			{addr: d1exe.L2VertArch1Addr, tmxName: "varch1.tmx", dtype: enum.DTypeCatacombs},
 			{addr: d1exe.L2VertArch2Addr, tmxName: "varch2.tmx", dtype: enum.DTypeCatacombs},
 			{addr: d1exe.L2VertArch3Addr, tmxName: "varch3.tmx", dtype: enum.DTypeCatacombs},
@@ -216,7 +216,7 @@ func dump(mpqDir, exePath, outputDir string) error {
 			{addr: d1exe.L2CenterDoor6Addr, tmxName: "ctrdoor6.tmx", dtype: enum.DTypeCatacombs},
 			{addr: d1exe.L2CenterDoor7Addr, tmxName: "ctrdoor7.tmx", dtype: enum.DTypeCatacombs},
 			{addr: d1exe.L2CenterDoor8Addr, tmxName: "ctrdoor8.tmx", dtype: enum.DTypeCatacombs},
-			// l3.
+			// l3 minisets.
 			{addr: d1exe.L3StairsUpAddr, tmxName: "l3up.tmx", dtype: enum.DTypeCaves},
 			{addr: d1exe.L3StairsDownAddr, tmxName: "l3down.tmx", dtype: enum.DTypeCaves},
 			{addr: d1exe.L3StairsToTownAddr, tmxName: "l3holdwarp.tmx", dtype: enum.DTypeCaves},
@@ -253,7 +253,7 @@ func dump(mpqDir, exePath, outputDir string) error {
 			{addr: d1exe.L3Extra4Addr, tmxName: "l3xtra4.tmx", dtype: enum.DTypeCaves},
 			{addr: d1exe.L3Extra5Addr, tmxName: "l3xtra5.tmx", dtype: enum.DTypeCaves},
 			{addr: d1exe.L3AnvilAddr, tmxName: "l3anvil.tmx", dtype: enum.DTypeCaves},
-			// l4.
+			// l4 minisets.
 			{addr: d1exe.L4StairsUpAddr, tmxName: "l4ustairs.tmx", dtype: enum.DTypeHell},
 			{addr: d1exe.L4StairsToTownAddr, tmxName: "l4twarp.tmx", dtype: enum.DTypeHell},
 			{addr: d1exe.L4StairsDownAddr, tmxName: "l4dstairs.tmx", dtype: enum.DTypeHell},
@@ -262,16 +262,16 @@ func dump(mpqDir, exePath, outputDir string) error {
 		}
 	case d1exe.DiabloVersionAlpha4:
 		minisetInfos = []MinisetInfo{
-			// l1 (identical, missing PWATERIN).
+			// l1 minisets (identical, missing PWATERIN).
 			//{addr: d1exe.L1Alpha4StairsUp1Addr, tmxName: "alpha4_stairsup.tmx", dtype: enum.DTypeCathedral},
 			//{addr: d1exe.L1Alpha4StairsUp2Addr, tmxName: "alpha4_l5stairsup.tmx", dtype: enum.DTypeCathedral},
 			//{addr: d1exe.L1Alpha4StairsDownAddr, tmxName: "alpha4_stairsdown.tmx", dtype: enum.DTypeCathedral},
 			//{addr: d1exe.L1Alpha4CandlestickAddr, tmxName: "alpha4_lamps.tmx", dtype: enum.DTypeCathedral},
-			// l1 (extra).
+			// l1 minisets (extra).
 			{addr: d1exe.L1Alpha4SarcophagusAddr, tmxName: "alpha4_sarc.tmx", dtype: enum.DTypeCathedral},
 			{addr: d1exe.L1Alpha4RightCorridorAddr, tmxName: "alpha4_rcorridor.tmx", dtype: enum.DTypeCathedral},
 			{addr: d1exe.L1Alpha4LeftCorridorAddr, tmxName: "alpha4_lcorridor.tmx", dtype: enum.DTypeCathedral},
-			// l2 (identical, missing WARPSTAIRS).
+			// l2 minisets (identical, missing WARPSTAIRS).
 			//{addr: d1exe.L2Alpha4VertArch1Addr, tmxName: "alpha4_varch1.tmx", dtype: enum.DTypeCatacombs},
 			//{addr: d1exe.L2Alpha4VertArch2Addr, tmxName: "alpha4_varch2.tmx", dtype: enum.DTypeCatacombs},
 			//{addr: d1exe.L2Alpha4VertArch3Addr, tmxName: "alpha4_varch3.tmx", dtype: enum.DTypeCatacombs},
@@ -382,6 +382,44 @@ func dump(mpqDir, exePath, outputDir string) error {
 			//{addr: d1exe.L2Alpha4CenterDoor6Addr, tmxName: "alpha4_ctrdoor6.tmx", dtype: enum.DTypeCatacombs},
 			//{addr: d1exe.L2Alpha4CenterDoor7Addr, tmxName: "alpha4_ctrdoor7.tmx", dtype: enum.DTypeCatacombs},
 			//{addr: d1exe.L2Alpha4CenterDoor8Addr, tmxName: "alpha4_ctrdoor8.tmx", dtype: enum.DTypeCatacombs},
+			// l3 minisets (identical, missing L3HOLDWARP, L3ANVIL).
+			//{addr: d1exe.L3Alpha4StairsUpAddr, tmxName: "alpha4_l3up.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4StairsDownAddr, tmxName: "alpha4_l3down.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Stalactite1Addr, tmxName: "alpha4_l3tite1.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Stalactite2Addr, tmxName: "alpha4_l3tite2.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Stalactite3Addr, tmxName: "alpha4_l3tite3.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Stalactite6Addr, tmxName: "alpha4_l3tite6.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Stalactite7Addr, tmxName: "alpha4_l3tite7.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Stalactite8Addr, tmxName: "alpha4_l3tite8.tmx", dtype: enum.DTypeCaves},   // -> stalacmite (grows from floor up)
+			//{addr: d1exe.L3Alpha4Stalactite9Addr, tmxName: "alpha4_l3tite9.tmx", dtype: enum.DTypeCaves},   // -> stalacmite (grows from floor up)
+			//{addr: d1exe.L3Alpha4Stalactite10Addr, tmxName: "alpha4_l3tite10.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
+			//{addr: d1exe.L3Alpha4Stalactite11Addr, tmxName: "alpha4_l3tite11.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
+			//{addr: d1exe.L3Alpha4Stalactite12Addr, tmxName: "alpha4_l3tite12.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Stalactite13Addr, tmxName: "alpha4_l3tite13.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice1Addr, tmxName: "alpha4_l3crev1.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice2Addr, tmxName: "alpha4_l3crev2.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice3Addr, tmxName: "alpha4_l3crev3.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice4Addr, tmxName: "alpha4_l3crev4.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice5Addr, tmxName: "alpha4_l3crev5.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice6Addr, tmxName: "alpha4_l3crev6.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice7Addr, tmxName: "alpha4_l3crev7.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice8Addr, tmxName: "alpha4_l3crev8.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice9Addr, tmxName: "alpha4_l3crev9.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice10Addr, tmxName: "alpha4_l3crev10.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Crevice11Addr, tmxName: "alpha4_l3crev11.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Isle1Addr, tmxName: "alpha4_l3isle1.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Isle2Addr, tmxName: "alpha4_l3isle2.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Isle3Addr, tmxName: "alpha4_l3isle3.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Isle4Addr, tmxName: "alpha4_l3isle4.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Isle5Addr, tmxName: "alpha4_l3isle5.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Extra1Addr, tmxName: "alpha4_l3xtra1.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Extra2Addr, tmxName: "alpha4_l3xtra2.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Extra3Addr, tmxName: "alpha4_l3xtra3.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Extra4Addr, tmxName: "alpha4_l3xtra4.tmx", dtype: enum.DTypeCaves},
+			//{addr: d1exe.L3Alpha4Extra5Addr, tmxName: "alpha4_l3xtra5.tmx", dtype: enum.DTypeCaves},
+			// l3 minisets (extra).
+			{addr: d1exe.L3Alpha4Stalactite4Addr, tmxName: "alpha4_l3tite4.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
+			{addr: d1exe.L3Alpha4Stalactite5Addr, tmxName: "alpha4_l3tite5.tmx", dtype: enum.DTypeCaves}, // -> stalacmite (grows from floor up)
 		}
 	}
 	for _, minisetInfo := range minisetInfos {

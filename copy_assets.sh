@@ -400,6 +400,8 @@ cp _dump_/_minisets_/catacombs/ctrdoor8.tmx   _assets_/_minisets_/catacombs/cent
 
 mkdir -p _assets_/_minisets_/caves
 
+# Diablo 1.09b.
+#
 # * l3up.tmx       -> stairs_up.tmx
 # * l3down.tmx     -> stairs_down.tmx
 # * l3holdwarp.tmx -> stairs_to_town.tmx
@@ -473,6 +475,14 @@ cp _dump_/_minisets_/caves/l3xtra3.tmx    _assets_/_minisets_/caves/extra3.tmx
 cp _dump_/_minisets_/caves/l3xtra4.tmx    _assets_/_minisets_/caves/extra4.tmx
 cp _dump_/_minisets_/caves/l3xtra5.tmx    _assets_/_minisets_/caves/extra5.tmx
 cp _dump_/_minisets_/caves/l3anvil.tmx    _assets_/_minisets_/caves/anvil.tmx
+
+# Diablo pre-release-demo [dalpha] (1996-08-17).
+#
+# * l3tite4.tmx    -> stalactite4.tmx
+# * l3tite5.tmx    -> stalactite5.tmx
+
+cp _dump_/_minisets_/caves/alpha4_l3tite4.tmx    _assets_/_minisets_/caves/stalactite4.tmx
+cp _dump_/_minisets_/caves/alpha4_l3tite5.tmx    _assets_/_minisets_/caves/stalactite5.tmx
 
 # --- [ Hell ] -----------------------------------------------------------------
 

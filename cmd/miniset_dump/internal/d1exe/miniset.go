@@ -184,7 +184,7 @@ const (
 	L1Alpha4SarcophagusAddr   = 0x4BCCD8 // SARC
 	L1Alpha4RightCorridorAddr = 0x4BCCE8 // RCORRIDOR
 	L1Alpha4LeftCorridorAddr  = 0x4BCCF8 // LCORRIDOR
-	// l2 minisets  (identical, missing WARPSTAIRS).
+	// l2 minisets (identical, missing WARPSTAIRS).
 	//L2Alpha4VertArch1Addr     = 0x4B9F80 // VARCH1
 	//L2Alpha4VertArch2Addr     = 0x4B9F98 // VARCH2
 	//L2Alpha4VertArch3Addr     = 0x4B9FB0 // VARCH3
@@ -295,6 +295,44 @@ const (
 	//L2Alpha4CenterDoor6Addr   = 0x4BA738 // CTRDOOR6
 	//L2Alpha4CenterDoor7Addr   = 0x4BA750 // CTRDOOR7
 	//L2Alpha4CenterDoor8Addr   = 0x4BA768 // CTRDOOR8
+	// l3 minisets (identical, missing L3HOLDWARP, L3ANVIL).
+	//L3Alpha4StairsUpAddr     = 0x4ADD18 // L3UP
+	//L3Alpha4StairsDownAddr   = 0x4ADD30 // L3DOWN
+	//L3Alpha4Stalactite1Addr  = 0x4ADD48 // L3TITE1
+	//L3Alpha4Stalactite2Addr  = 0x4ADD70 // L3TITE2
+	//L3Alpha4Stalactite3Addr  = 0x4ADD98 // L3TITE3
+	//L3Alpha4Stalactite6Addr  = 0x4ADE00 // L3TITE6
+	//L3Alpha4Stalactite7Addr  = 0x4ADE30 // L3TITE7
+	//L3Alpha4Stalactite8Addr  = 0x4ADE60 // L3TITE8
+	//L3Alpha4Stalactite9Addr  = 0x4ADE78 // L3TITE9
+	//L3Alpha4Stalactite10Addr = 0x4ADE90 // L3TITE10
+	//L3Alpha4Stalactite11Addr = 0x4ADEA8 // L3TITE11
+	//L3Alpha4Stalactite12Addr = 0x4ADEC0 // L3TITE12
+	//L3Alpha4Stalactite13Addr = 0x4ADEC8 // L3TITE13
+	//L3Alpha4Crevice1Addr     = 0x4ADED0 // L3CREV1
+	//L3Alpha4Crevice2Addr     = 0x4ADED8 // L3CREV2
+	//L3Alpha4Crevice3Addr     = 0x4ADEE0 // L3CREV3
+	//L3Alpha4Crevice4Addr     = 0x4ADEE8 // L3CREV4
+	//L3Alpha4Crevice5Addr     = 0x4ADEF0 // L3CREV5
+	//L3Alpha4Crevice6Addr     = 0x4ADEF8 // L3CREV6
+	//L3Alpha4Crevice7Addr     = 0x4ADF00 // L3CREV7
+	//L3Alpha4Crevice8Addr     = 0x4ADF08 // L3CREV8
+	//L3Alpha4Crevice9Addr     = 0x4ADF10 // L3CREV9
+	//L3Alpha4Crevice10Addr    = 0x4ADF18 // L3CREV10
+	//L3Alpha4Crevice11Addr    = 0x4ADF20 // L3CREV11
+	//L3Alpha4Isle1Addr        = 0x4ADF28 // L3ISLE1
+	//L3Alpha4Isle2Addr        = 0x4ADF38 // L3ISLE2
+	//L3Alpha4Isle3Addr        = 0x4ADF48 // L3ISLE3
+	//L3Alpha4Isle4Addr        = 0x4ADF58 // L3ISLE4
+	//L3Alpha4Isle5Addr        = 0x4ADF68 // L3ISLE5
+	//L3Alpha4Extra1Addr       = 0x4ADF74 // L3XTRA1
+	//L3Alpha4Extra2Addr       = 0x4ADF78 // L3XTRA2
+	//L3Alpha4Extra3Addr       = 0x4ADF7C // L3XTRA3
+	//L3Alpha4Extra4Addr       = 0x4ADF80 // L3XTRA4
+	//L3Alpha4Extra5Addr       = 0x4ADF84 // L3XTRA5
+	// l3 minisets (extra).
+	L3Alpha4Stalactite4Addr = 0x4ADDC0 // L3TITE4
+	L3Alpha4Stalactite5Addr = 0x4ADDE0 // L3TITE5
 )
 
 // parseMinisets parses the miniset DUN files contained within the executable.
@@ -303,13 +341,13 @@ func (exe *Executable) parseMinisets() error {
 	switch exe.Version {
 	case DiabloVersion109:
 		addrs = []uint32{
-			// l1.
+			// l1 minisets.
 			L1StairsUp1Addr,
 			L1StairsUp2Addr,
 			L1StairsDownAddr,
 			L1CandlestickAddr,
 			L1StairsDownPoisonAddr,
-			// l2.
+			// l2 minisets.
 			L2VertArch1Addr,
 			L2VertArch2Addr,
 			L2VertArch3Addr,
@@ -421,7 +459,7 @@ func (exe *Executable) parseMinisets() error {
 			L2CenterDoor6Addr,
 			L2CenterDoor7Addr,
 			L2CenterDoor8Addr,
-			// l3.
+			// l3 minisets.
 			L3StairsUpAddr,
 			L3StairsDownAddr,
 			L3StairsToTownAddr,
@@ -458,7 +496,7 @@ func (exe *Executable) parseMinisets() error {
 			L3Extra4Addr,
 			L3Extra5Addr,
 			L3AnvilAddr,
-			// l4.
+			// l4 minisets.
 			L4StairsUpAddr,
 			L4StairsToTownAddr,
 			L4StairsDownAddr,
@@ -467,16 +505,16 @@ func (exe *Executable) parseMinisets() error {
 		}
 	case DiabloVersionAlpha4:
 		addrs = []uint32{
-			// l1 (identical, missing PWATERIN).
+			// l1 minisets (identical, missing PWATERIN).
 			//L1Alpha4StairsUp1Addr,
 			//L1Alpha4StairsUp2Addr,
 			//L1Alpha4StairsDownAddr,
 			//L1Alpha4CandlestickAddr,
-			// l1 (extra).
+			// l1 minisets (extra).
 			L1Alpha4SarcophagusAddr,
 			L1Alpha4RightCorridorAddr,
 			L1Alpha4LeftCorridorAddr,
-			// l2 (identical, missing WARPSTAIRS).
+			// l2 minisets (identical, missing WARPSTAIRS).
 			//L2Alpha4VertArch1Addr,
 			//L2Alpha4VertArch2Addr,
 			//L2Alpha4VertArch3Addr,
@@ -587,6 +625,44 @@ func (exe *Executable) parseMinisets() error {
 			//L2Alpha4CenterDoor6Addr,
 			//L2Alpha4CenterDoor7Addr,
 			//L2Alpha4CenterDoor8Addr,
+			// l3 minisets (identical, missing L3HOLDWARP, L3ANVIL).
+			//L3Alpha4StairsUpAddr,
+			//L3Alpha4StairsDownAddr,
+			//L3Alpha4Stalactite1Addr,
+			//L3Alpha4Stalactite2Addr,
+			//L3Alpha4Stalactite3Addr,
+			//L3Alpha4Stalactite6Addr,
+			//L3Alpha4Stalactite7Addr,
+			//L3Alpha4Stalactite8Addr,
+			//L3Alpha4Stalactite9Addr,
+			//L3Alpha4Stalactite10Addr,
+			//L3Alpha4Stalactite11Addr,
+			//L3Alpha4Stalactite12Addr,
+			//L3Alpha4Stalactite13Addr,
+			//L3Alpha4Crevice1Addr,
+			//L3Alpha4Crevice2Addr,
+			//L3Alpha4Crevice3Addr,
+			//L3Alpha4Crevice4Addr,
+			//L3Alpha4Crevice5Addr,
+			//L3Alpha4Crevice6Addr,
+			//L3Alpha4Crevice7Addr,
+			//L3Alpha4Crevice8Addr,
+			//L3Alpha4Crevice9Addr,
+			//L3Alpha4Crevice10Addr,
+			//L3Alpha4Crevice11Addr,
+			//L3Alpha4Isle1Addr,
+			//L3Alpha4Isle2Addr,
+			//L3Alpha4Isle3Addr,
+			//L3Alpha4Isle4Addr,
+			//L3Alpha4Isle5Addr,
+			//L3Alpha4Extra1Addr,
+			//L3Alpha4Extra2Addr,
+			//L3Alpha4Extra3Addr,
+			//L3Alpha4Extra4Addr,
+			//L3Alpha4Extra5Addr,
+			// l3 minisets (extra).
+			L3Alpha4Stalactite4Addr,
+			L3Alpha4Stalactite5Addr,
 		}
 	}
 	for _, addr := range addrs {
