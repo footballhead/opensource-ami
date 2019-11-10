@@ -478,8 +478,8 @@ cp _dump_/_minisets_/caves/l3anvil.tmx    _assets_/_minisets_/caves/anvil.tmx
 
 # Diablo pre-release-demo [dalpha] (1996-08-17).
 #
-# * l3tite4.tmx    -> stalactite4.tmx
-# * l3tite5.tmx    -> stalactite5.tmx
+# * alpha4_l3tite4.tmx    -> stalactite4.tmx
+# * alpha4_l3tite5.tmx    -> stalactite5.tmx
 
 cp _dump_/_minisets_/caves/alpha4_l3tite4.tmx    _assets_/_minisets_/caves/stalactite4.tmx
 cp _dump_/_minisets_/caves/alpha4_l3tite5.tmx    _assets_/_minisets_/caves/stalactite5.tmx
@@ -488,6 +488,8 @@ cp _dump_/_minisets_/caves/alpha4_l3tite5.tmx    _assets_/_minisets_/caves/stala
 
 mkdir -p _assets_/_minisets_/hell
 
+# Diablo 1.09b.
+#
 # * l4ustairs.tmx -> stairs_up.tmx
 # * l4twarp.tmx   -> stairs_to_town.tmx
 # * l4dstairs.tmx -> stairs_down.tmx
@@ -499,3 +501,13 @@ cp _dump_/_minisets_/hell/l4twarp.tmx   _assets_/_minisets_/hell/stairs_to_town.
 cp _dump_/_minisets_/hell/l4dstairs.tmx _assets_/_minisets_/hell/stairs_down.tmx
 cp _dump_/_minisets_/hell/l4penta.tmx   _assets_/_minisets_/hell/penta1.tmx
 cp _dump_/_minisets_/hell/l4penta2.tmx  _assets_/_minisets_/hell/penta2.tmx
+
+# Diablo pre-release-demo [dalpha] (1996-08-17).
+#
+# Note: the pre-release used the Catacombs tileset for Hell.
+#
+# * alpha4_l4ustairs.tmx -> alpha4_stairs_up.tmx
+# * alpha4_l4dstairs.tmx -> alpha4_stairs_down.tmx
+
+cp _dump_/_minisets_/catacombs/alpha4_l4ustairs.tmx    _assets_/_minisets_/catacombs/hell_stairs_up.tmx
+cp _dump_/_minisets_/catacombs/alpha4_l4dstairs.tmx    _assets_/_minisets_/catacombs/hell_stairs_down.tmx
