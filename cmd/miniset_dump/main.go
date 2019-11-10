@@ -262,10 +262,15 @@ func dump(mpqDir, exePath, outputDir string) error {
 		}
 	case d1exe.DiabloVersionAlpha4:
 		minisetInfos = []MinisetInfo{
+			// l1 (identical).
+			//{addr: d1exe.L1Alpha4StairsUp1Addr, tmxName: "alpha4_stairsup.tmx", dtype: enum.DTypeCathedral},
+			//{addr: d1exe.L1Alpha4StairsUp2Addr, tmxName: "alpha4_l5stairsup.tmx", dtype: enum.DTypeCathedral},
+			//{addr: d1exe.L1Alpha4StairsDownAddr, tmxName: "alpha4_stairsdown.tmx", dtype: enum.DTypeCathedral},
+			//{addr: d1exe.L1Alpha4CandlestickAddr, tmxName: "alpha4_lamps.tmx", dtype: enum.DTypeCathedral},
 			// l1 (extra).
-			{addr: d1exe.L1SarcophagusAddr, tmxName: "alpha4_sarc.tmx", dtype: enum.DTypeCathedral},
-			{addr: d1exe.L1RightCorridorAddr, tmxName: "alpha4_rcorridor.tmx", dtype: enum.DTypeCathedral},
-			{addr: d1exe.L1LeftCorridorAddr, tmxName: "alpha4_lcorridor.tmx", dtype: enum.DTypeCathedral},
+			{addr: d1exe.L1Alpha4SarcophagusAddr, tmxName: "alpha4_sarc.tmx", dtype: enum.DTypeCathedral},
+			{addr: d1exe.L1Alpha4RightCorridorAddr, tmxName: "alpha4_rcorridor.tmx", dtype: enum.DTypeCathedral},
+			{addr: d1exe.L1Alpha4LeftCorridorAddr, tmxName: "alpha4_lcorridor.tmx", dtype: enum.DTypeCathedral},
 		}
 	}
 	for _, minisetInfo := range minisetInfos {

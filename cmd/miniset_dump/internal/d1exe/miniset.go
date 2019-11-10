@@ -175,10 +175,15 @@ const (
 
 // ref: pre-release-demo [dalpha] (1996-08-17).
 const (
-	// l1 (extra).
-	L1SarcophagusAddr   = 0x4BCCD8 // SARC
-	L1RightCorridorAddr = 0x4BCCE8 // RCORRIDOR
-	L1LeftCorridorAddr  = 0x4BCCF8 // LCORRIDOR
+	// l1 minisets (identical).
+	//L1Alpha4StairsUp1Addr        = 0x4BCC58 // STAIRSUP
+	//L1Alpha4StairsUp2Addr        = 0x4BCC80 // L5STAIRSUP
+	//L1Alpha4StairsDownAddr       = 0x4BCCA8 // STAIRSDOWN
+	//L1Alpha4CandlestickAddr      = 0x4BCCC8 // LAMPS
+	// l1 minisets (extra).
+	L1Alpha4SarcophagusAddr   = 0x4BCCD8 // SARC
+	L1Alpha4RightCorridorAddr = 0x4BCCE8 // RCORRIDOR
+	L1Alpha4LeftCorridorAddr  = 0x4BCCF8 // LCORRIDOR
 )
 
 // parseMinisets parses the miniset DUN files contained within the executable.
@@ -351,10 +356,15 @@ func (exe *Executable) parseMinisets() error {
 		}
 	case DiabloVersionAlpha4:
 		addrs = []uint32{
+			// l1 (identical).
+			//L1Alpha4StairsUp1Addr,
+			//L1Alpha4StairsUp2Addr,
+			//L1Alpha4StairsDownAddr,
+			//L1Alpha4CandlestickAddr,
 			// l1 (extra).
-			L1SarcophagusAddr,
-			L1RightCorridorAddr,
-			L1LeftCorridorAddr,
+			L1Alpha4SarcophagusAddr,
+			L1Alpha4RightCorridorAddr,
+			L1Alpha4LeftCorridorAddr,
 		}
 	}
 	for _, addr := range addrs {
