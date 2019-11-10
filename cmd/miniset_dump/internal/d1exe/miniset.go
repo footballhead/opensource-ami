@@ -175,7 +175,7 @@ const (
 
 // ref: pre-release-demo [dalpha] (1996-08-17).
 const (
-	// l1 minisets (identical).
+	// l1 minisets (identical, missing PWATERIN).
 	//L1Alpha4StairsUp1Addr        = 0x4BCC58 // STAIRSUP
 	//L1Alpha4StairsUp2Addr        = 0x4BCC80 // L5STAIRSUP
 	//L1Alpha4StairsDownAddr       = 0x4BCCA8 // STAIRSDOWN
@@ -184,6 +184,117 @@ const (
 	L1Alpha4SarcophagusAddr   = 0x4BCCD8 // SARC
 	L1Alpha4RightCorridorAddr = 0x4BCCE8 // RCORRIDOR
 	L1Alpha4LeftCorridorAddr  = 0x4BCCF8 // LCORRIDOR
+	// l2 minisets  (identical, missing WARPSTAIRS).
+	//L2Alpha4VertArch1Addr     = 0x4B9F80 // VARCH1
+	//L2Alpha4VertArch2Addr     = 0x4B9F98 // VARCH2
+	//L2Alpha4VertArch3Addr     = 0x4B9FB0 // VARCH3
+	//L2Alpha4VertArch4Addr     = 0x4B9FC8 // VARCH4
+	//L2Alpha4VertArch5Addr     = 0x4B9FE0 // VARCH5
+	//L2Alpha4VertArch6Addr     = 0x4B9FF8 // VARCH6
+	//L2Alpha4VertArch7Addr     = 0x4BA010 // VARCH7
+	//L2Alpha4VertArch8Addr     = 0x4BA028 // VARCH8
+	//L2Alpha4VertArch9Addr     = 0x4BA040 // VARCH9
+	//L2Alpha4VertArch10Addr    = 0x4BA058 // VARCH10
+	//L2Alpha4VertArch11Addr    = 0x4BA070 // VARCH11
+	//L2Alpha4VertArch12Addr    = 0x4BA088 // VARCH12
+	//L2Alpha4VertArch13Addr    = 0x4BA0A0 // VARCH13
+	//L2Alpha4VertArch14Addr    = 0x4BA0B8 // VARCH14
+	//L2Alpha4VertArch15Addr    = 0x4BA0D0 // VARCH15
+	//L2Alpha4VertArch16Addr    = 0x4BA0E8 // VARCH16
+	//L2Alpha4VertArch17Addr    = 0x4BA100 // VARCH17
+	//L2Alpha4VertArch18Addr    = 0x4BA110 // VARCH18
+	//L2Alpha4VertArch19Addr    = 0x4BA120 // VARCH19
+	//L2Alpha4VertArch20Addr    = 0x4BA130 // VARCH20
+	//L2Alpha4VertArch21Addr    = 0x4BA140 // VARCH21
+	//L2Alpha4VertArch22Addr    = 0x4BA150 // VARCH22
+	//L2Alpha4VertArch23Addr    = 0x4BA160 // VARCH23
+	//L2Alpha4VertArch24Addr    = 0x4BA170 // VARCH24
+	//L2Alpha4VertArch25Addr    = 0x4BA180 // VARCH25
+	//L2Alpha4VertArch26Addr    = 0x4BA198 // VARCH26
+	//L2Alpha4VertArch27Addr    = 0x4BA1B0 // VARCH27
+	//L2Alpha4VertArch28Addr    = 0x4BA1C8 // VARCH28
+	//L2Alpha4VertArch29Addr    = 0x4BA1E0 // VARCH29
+	//L2Alpha4VertArch30Addr    = 0x4BA1F8 // VARCH30
+	//L2Alpha4VertArch31Addr    = 0x4BA210 // VARCH31
+	//L2Alpha4VertArch32Addr    = 0x4BA228 // VARCH32
+	//L2Alpha4VertArch33Addr    = 0x4BA240 // VARCH33
+	//L2Alpha4VertArch34Addr    = 0x4BA258 // VARCH34
+	//L2Alpha4VertArch35Addr    = 0x4BA270 // VARCH35
+	//L2Alpha4VertArch36Addr    = 0x4BA288 // VARCH36
+	//L2Alpha4VertArch37Addr    = 0x4BA2A0 // VARCH37
+	//L2Alpha4VertArch38Addr    = 0x4BA2B8 // VARCH38
+	//L2Alpha4VertArch39Addr    = 0x4BA2D0 // VARCH39
+	//L2Alpha4VertArch40Addr    = 0x4BA2E8 // VARCH40
+	//L2Alpha4HorizArch1Addr    = 0x4BA300 // HARCH1
+	//L2Alpha4HorizArch2Addr    = 0x4BA310 // HARCH2
+	//L2Alpha4HorizArch3Addr    = 0x4BA320 // HARCH3
+	//L2Alpha4HorizArch4Addr    = 0x4BA330 // HARCH4
+	//L2Alpha4HorizArch5Addr    = 0x4BA340 // HARCH5
+	//L2Alpha4HorizArch6Addr    = 0x4BA350 // HARCH6
+	//L2Alpha4HorizArch7Addr    = 0x4BA360 // HARCH7
+	//L2Alpha4HorizArch8Addr    = 0x4BA370 // HARCH8
+	//L2Alpha4HorizArch9Addr    = 0x4BA380 // HARCH9
+	//L2Alpha4HorizArch10Addr   = 0x4BA390 // HARCH10
+	//L2Alpha4HorizArch11Addr   = 0x4BA3A0 // HARCH11
+	//L2Alpha4HorizArch12Addr   = 0x4BA3B0 // HARCH12
+	//L2Alpha4HorizArch13Addr   = 0x4BA3C0 // HARCH13
+	//L2Alpha4HorizArch14Addr   = 0x4BA3D0 // HARCH14
+	//L2Alpha4HorizArch15Addr   = 0x4BA3E0 // HARCH15
+	//L2Alpha4HorizArch16Addr   = 0x4BA3F0 // HARCH16
+	//L2Alpha4HorizArch17Addr   = 0x4BA400 // HARCH17
+	//L2Alpha4HorizArch18Addr   = 0x4BA410 // HARCH18
+	//L2Alpha4HorizArch19Addr   = 0x4BA420 // HARCH19
+	//L2Alpha4HorizArch20Addr   = 0x4BA430 // HARCH20
+	//L2Alpha4HorizArch21Addr   = 0x4BA440 // HARCH21
+	//L2Alpha4HorizArch22Addr   = 0x4BA450 // HARCH22
+	//L2Alpha4HorizArch23Addr   = 0x4BA460 // HARCH23
+	//L2Alpha4HorizArch24Addr   = 0x4BA470 // HARCH24
+	//L2Alpha4HorizArch25Addr   = 0x4BA480 // HARCH25
+	//L2Alpha4HorizArch26Addr   = 0x4BA490 // HARCH26
+	//L2Alpha4HorizArch27Addr   = 0x4BA4A0 // HARCH27
+	//L2Alpha4HorizArch28Addr   = 0x4BA4B0 // HARCH28
+	//L2Alpha4HorizArch29Addr   = 0x4BA4C0 // HARCH29
+	//L2Alpha4HorizArch30Addr   = 0x4BA4D0 // HARCH30
+	//L2Alpha4HorizArch31Addr   = 0x4BA4E0 // HARCH31
+	//L2Alpha4HorizArch32Addr   = 0x4BA4F0 // HARCH32
+	//L2Alpha4HorizArch33Addr   = 0x4BA500 // HARCH33
+	//L2Alpha4HorizArch34Addr   = 0x4BA510 // HARCH34
+	//L2Alpha4HorizArch35Addr   = 0x4BA520 // HARCH35
+	//L2Alpha4HorizArch36Addr   = 0x4BA530 // HARCH36
+	//L2Alpha4HorizArch37Addr   = 0x4BA540 // HARCH37
+	//L2Alpha4HorizArch38Addr   = 0x4BA550 // HARCH38
+	//L2Alpha4HorizArch39Addr   = 0x4BA560 // HARCH39
+	//L2Alpha4HorizArch40Addr   = 0x4BA570 // HARCH40
+	//L2Alpha4StairsUpAddr      = 0x4BA580 // USTAIRS
+	//L2Alpha4StairsDownAddr    = 0x4BA5A8 // DSTAIRS
+	//L2Alpha4CrushedColumnAddr = 0x4BA5D0 // CRUSHCOL
+	//L2Alpha4Big1Addr          = 0x4BA5E8 // BIG1
+	//L2Alpha4Big2Addr          = 0x4BA5F8 // BIG2
+	//L2Alpha4Big3Addr          = 0x4BA608 // BIG3
+	//L2Alpha4Big4Addr          = 0x4BA610 // BIG4
+	//L2Alpha4Big5Addr          = 0x4BA618 // BIG5
+	//L2Alpha4Big6Addr          = 0x4BA628 // BIG6
+	//L2Alpha4Big7Addr          = 0x4BA630 // BIG7
+	//L2Alpha4Big8Addr          = 0x4BA638 // BIG8
+	//L2Alpha4Big9Addr          = 0x4BA648 // BIG9
+	//L2Alpha4Big10Addr         = 0x4BA658 // BIG10
+	//L2Alpha4Ruins1Addr        = 0x4BA664 // RUINS1
+	//L2Alpha4Ruins2Addr        = 0x4BA668 // RUINS2
+	//L2Alpha4Ruins3Addr        = 0x4BA66C // RUINS3
+	//L2Alpha4Ruins4Addr        = 0x4BA670 // RUINS4
+	//L2Alpha4Ruins5Addr        = 0x4BA674 // RUINS5
+	//L2Alpha4Ruins6Addr        = 0x4BA678 // RUINS6
+	//L2Alpha4Ruins7Addr        = 0x4BA67C // RUINS7
+	//L2Alpha4Pancreas1Addr     = 0x4BA680 // PANCREAS1
+	//L2Alpha4Pancreas2Addr     = 0x4BA6A0 // PANCREAS2
+	//L2Alpha4CenterDoor1Addr   = 0x4BA6C0 // CTRDOOR1
+	//L2Alpha4CenterDoor2Addr   = 0x4BA6D8 // CTRDOOR2
+	//L2Alpha4CenterDoor3Addr   = 0x4BA6F0 // CTRDOOR3
+	//L2Alpha4CenterDoor4Addr   = 0x4BA708 // CTRDOOR4
+	//L2Alpha4CenterDoor5Addr   = 0x4BA720 // CTRDOOR5
+	//L2Alpha4CenterDoor6Addr   = 0x4BA738 // CTRDOOR6
+	//L2Alpha4CenterDoor7Addr   = 0x4BA750 // CTRDOOR7
+	//L2Alpha4CenterDoor8Addr   = 0x4BA768 // CTRDOOR8
 )
 
 // parseMinisets parses the miniset DUN files contained within the executable.
@@ -356,7 +467,7 @@ func (exe *Executable) parseMinisets() error {
 		}
 	case DiabloVersionAlpha4:
 		addrs = []uint32{
-			// l1 (identical).
+			// l1 (identical, missing PWATERIN).
 			//L1Alpha4StairsUp1Addr,
 			//L1Alpha4StairsUp2Addr,
 			//L1Alpha4StairsDownAddr,
@@ -365,6 +476,117 @@ func (exe *Executable) parseMinisets() error {
 			L1Alpha4SarcophagusAddr,
 			L1Alpha4RightCorridorAddr,
 			L1Alpha4LeftCorridorAddr,
+			// l2 (identical, missing WARPSTAIRS).
+			//L2Alpha4VertArch1Addr,
+			//L2Alpha4VertArch2Addr,
+			//L2Alpha4VertArch3Addr,
+			//L2Alpha4VertArch4Addr,
+			//L2Alpha4VertArch5Addr,
+			//L2Alpha4VertArch6Addr,
+			//L2Alpha4VertArch7Addr,
+			//L2Alpha4VertArch8Addr,
+			//L2Alpha4VertArch9Addr,
+			//L2Alpha4VertArch10Addr,
+			//L2Alpha4VertArch11Addr,
+			//L2Alpha4VertArch12Addr,
+			//L2Alpha4VertArch13Addr,
+			//L2Alpha4VertArch14Addr,
+			//L2Alpha4VertArch15Addr,
+			//L2Alpha4VertArch16Addr,
+			//L2Alpha4VertArch17Addr,
+			//L2Alpha4VertArch18Addr,
+			//L2Alpha4VertArch19Addr,
+			//L2Alpha4VertArch20Addr,
+			//L2Alpha4VertArch21Addr,
+			//L2Alpha4VertArch22Addr,
+			//L2Alpha4VertArch23Addr,
+			//L2Alpha4VertArch24Addr,
+			//L2Alpha4VertArch25Addr,
+			//L2Alpha4VertArch26Addr,
+			//L2Alpha4VertArch27Addr,
+			//L2Alpha4VertArch28Addr,
+			//L2Alpha4VertArch29Addr,
+			//L2Alpha4VertArch30Addr,
+			//L2Alpha4VertArch31Addr,
+			//L2Alpha4VertArch32Addr,
+			//L2Alpha4VertArch33Addr,
+			//L2Alpha4VertArch34Addr,
+			//L2Alpha4VertArch35Addr,
+			//L2Alpha4VertArch36Addr,
+			//L2Alpha4VertArch37Addr,
+			//L2Alpha4VertArch38Addr,
+			//L2Alpha4VertArch39Addr,
+			//L2Alpha4VertArch40Addr,
+			//L2Alpha4HorizArch1Addr,
+			//L2Alpha4HorizArch2Addr,
+			//L2Alpha4HorizArch3Addr,
+			//L2Alpha4HorizArch4Addr,
+			//L2Alpha4HorizArch5Addr,
+			//L2Alpha4HorizArch6Addr,
+			//L2Alpha4HorizArch7Addr,
+			//L2Alpha4HorizArch8Addr,
+			//L2Alpha4HorizArch9Addr,
+			//L2Alpha4HorizArch10Addr,
+			//L2Alpha4HorizArch11Addr,
+			//L2Alpha4HorizArch12Addr,
+			//L2Alpha4HorizArch13Addr,
+			//L2Alpha4HorizArch14Addr,
+			//L2Alpha4HorizArch15Addr,
+			//L2Alpha4HorizArch16Addr,
+			//L2Alpha4HorizArch17Addr,
+			//L2Alpha4HorizArch18Addr,
+			//L2Alpha4HorizArch19Addr,
+			//L2Alpha4HorizArch20Addr,
+			//L2Alpha4HorizArch21Addr,
+			//L2Alpha4HorizArch22Addr,
+			//L2Alpha4HorizArch23Addr,
+			//L2Alpha4HorizArch24Addr,
+			//L2Alpha4HorizArch25Addr,
+			//L2Alpha4HorizArch26Addr,
+			//L2Alpha4HorizArch27Addr,
+			//L2Alpha4HorizArch28Addr,
+			//L2Alpha4HorizArch29Addr,
+			//L2Alpha4HorizArch30Addr,
+			//L2Alpha4HorizArch31Addr,
+			//L2Alpha4HorizArch32Addr,
+			//L2Alpha4HorizArch33Addr,
+			//L2Alpha4HorizArch34Addr,
+			//L2Alpha4HorizArch35Addr,
+			//L2Alpha4HorizArch36Addr,
+			//L2Alpha4HorizArch37Addr,
+			//L2Alpha4HorizArch38Addr,
+			//L2Alpha4HorizArch39Addr,
+			//L2Alpha4HorizArch40Addr,
+			//L2Alpha4StairsUpAddr,
+			//L2Alpha4StairsDownAddr,
+			//L2Alpha4CrushedColumnAddr,
+			//L2Alpha4Big1Addr,
+			//L2Alpha4Big2Addr,
+			//L2Alpha4Big3Addr,
+			//L2Alpha4Big4Addr,
+			//L2Alpha4Big5Addr,
+			//L2Alpha4Big6Addr,
+			//L2Alpha4Big7Addr,
+			//L2Alpha4Big8Addr,
+			//L2Alpha4Big9Addr,
+			//L2Alpha4Big10Addr,
+			//L2Alpha4Ruins1Addr,
+			//L2Alpha4Ruins2Addr,
+			//L2Alpha4Ruins3Addr,
+			//L2Alpha4Ruins4Addr,
+			//L2Alpha4Ruins5Addr,
+			//L2Alpha4Ruins6Addr,
+			//L2Alpha4Ruins7Addr,
+			//L2Alpha4Pancreas1Addr,
+			//L2Alpha4Pancreas2Addr,
+			//L2Alpha4CenterDoor1Addr,
+			//L2Alpha4CenterDoor2Addr,
+			//L2Alpha4CenterDoor3Addr,
+			//L2Alpha4CenterDoor4Addr,
+			//L2Alpha4CenterDoor5Addr,
+			//L2Alpha4CenterDoor6Addr,
+			//L2Alpha4CenterDoor7Addr,
+			//L2Alpha4CenterDoor8Addr,
 		}
 	}
 	for _, addr := range addrs {
