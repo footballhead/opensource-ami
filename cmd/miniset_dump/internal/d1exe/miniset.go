@@ -333,6 +333,9 @@ const (
 	// l3 minisets (extra).
 	L3Alpha4Stalactite4Addr = 0x4ADDC0 // L3TITE4
 	L3Alpha4Stalactite5Addr = 0x4ADDE0 // L3TITE5
+	// l4 minisets.
+	L4Alpha4StairsUpAddr   = 0x4AC3A0 // L4USTAIRS
+	L4Alpha4StairsDownAddr = 0x4AC3C8 // L4DSTAIRS
 )
 
 // parseMinisets parses the miniset DUN files contained within the executable.
@@ -663,6 +666,9 @@ func (exe *Executable) parseMinisets() error {
 			// l3 minisets (extra).
 			L3Alpha4Stalactite4Addr,
 			L3Alpha4Stalactite5Addr,
+			// l4 minisets (extra)
+			L4Alpha4StairsUpAddr,
+			L4Alpha4StairsDownAddr,
 		}
 	}
 	for _, addr := range addrs {
