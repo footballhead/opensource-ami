@@ -158,16 +158,6 @@ cp _dump_/_minisets_/cathedral/stairsdown.tmx _assets_/_minisets_/cathedral/stai
 cp _dump_/_minisets_/cathedral/lamps.tmx      _assets_/_minisets_/cathedral/candlestick.tmx
 cp _dump_/_minisets_/cathedral/pwaterin.tmx   _assets_/_minisets_/cathedral/stairs_down_poison.tmx
 
-# Diablo pre-release-demo [dalpha] (1996-08-17).
-#
-# * alpha4_sarc.tmx      -> sarcophagus.tmx
-# * alpha4_rcorridor.tmx -> right_corridor.tmx
-# * alpha4_lcorridor.tmx -> left_corridor.tmx
-
-cp _dump_/_minisets_/cathedral/alpha4_sarc.tmx      _assets_/_minisets_/cathedral/sarcophagus.tmx
-cp _dump_/_minisets_/cathedral/alpha4_rcorridor.tmx _assets_/_minisets_/cathedral/right_corridor.tmx
-cp _dump_/_minisets_/cathedral/alpha4_lcorridor.tmx _assets_/_minisets_/cathedral/left_corridor.tmx
-
 # --- [ Catacombs ] ------------------------------------------------------------
 
 mkdir -p _assets_/_minisets_/catacombs
@@ -476,14 +466,6 @@ cp _dump_/_minisets_/caves/l3xtra4.tmx    _assets_/_minisets_/caves/extra4.tmx
 cp _dump_/_minisets_/caves/l3xtra5.tmx    _assets_/_minisets_/caves/extra5.tmx
 cp _dump_/_minisets_/caves/l3anvil.tmx    _assets_/_minisets_/caves/anvil.tmx
 
-# Diablo pre-release-demo [dalpha] (1996-08-17).
-#
-# * alpha4_l3tite4.tmx    -> stalactite4.tmx
-# * alpha4_l3tite5.tmx    -> stalactite5.tmx
-
-cp _dump_/_minisets_/caves/alpha4_l3tite4.tmx    _assets_/_minisets_/caves/stalactite4.tmx
-cp _dump_/_minisets_/caves/alpha4_l3tite5.tmx    _assets_/_minisets_/caves/stalactite5.tmx
-
 # --- [ Hell ] -----------------------------------------------------------------
 
 mkdir -p _assets_/_minisets_/hell
@@ -502,6 +484,39 @@ cp _dump_/_minisets_/hell/l4dstairs.tmx _assets_/_minisets_/hell/stairs_down.tmx
 cp _dump_/_minisets_/hell/l4penta.tmx   _assets_/_minisets_/hell/penta1.tmx
 cp _dump_/_minisets_/hell/l4penta2.tmx  _assets_/_minisets_/hell/penta2.tmx
 
+# ___ [ Diablo pre-release-demo [dalpha] (1996-08-17) ] ________________________
+
+ALPHA4_TEST=_dump_/_minisets_/cathedral/alpha4_sarc.tmx
+if [ -f "${ALPHA4_TEST}" ]; then
+
+# === [ Minisets ] =============================================================
+
+# --- [ Cathedral ] ------------------------------------------------------------
+
+# Diablo pre-release-demo [dalpha] (1996-08-17).
+#
+# * alpha4_sarc.tmx      -> sarcophagus.tmx
+# * alpha4_rcorridor.tmx -> right_corridor.tmx
+# * alpha4_lcorridor.tmx -> left_corridor.tmx
+
+cp _dump_/_minisets_/cathedral/alpha4_sarc.tmx      _assets_/_minisets_/cathedral/sarcophagus.tmx
+cp _dump_/_minisets_/cathedral/alpha4_rcorridor.tmx _assets_/_minisets_/cathedral/right_corridor.tmx
+cp _dump_/_minisets_/cathedral/alpha4_lcorridor.tmx _assets_/_minisets_/cathedral/left_corridor.tmx
+
+# --- [ Catacombs ] ------------------------------------------------------------
+
+# --- [ Caves ] ----------------------------------------------------------------
+
+# Diablo pre-release-demo [dalpha] (1996-08-17).
+#
+# * alpha4_l3tite4.tmx    -> stalactite4.tmx
+# * alpha4_l3tite5.tmx    -> stalactite5.tmx
+
+cp _dump_/_minisets_/caves/alpha4_l3tite4.tmx    _assets_/_minisets_/caves/stalactite4.tmx
+cp _dump_/_minisets_/caves/alpha4_l3tite5.tmx    _assets_/_minisets_/caves/stalactite5.tmx
+
+# --- [ Hell ] -----------------------------------------------------------------
+
 # Diablo pre-release-demo [dalpha] (1996-08-17).
 #
 # Note: the pre-release used the Catacombs tileset for Hell.
@@ -511,3 +526,5 @@ cp _dump_/_minisets_/hell/l4penta2.tmx  _assets_/_minisets_/hell/penta2.tmx
 
 cp _dump_/_minisets_/catacombs/alpha4_l4ustairs.tmx    _assets_/_minisets_/catacombs/hell_stairs_up.tmx
 cp _dump_/_minisets_/catacombs/alpha4_l4dstairs.tmx    _assets_/_minisets_/catacombs/hell_stairs_down.tmx
+
+fi # ALPHA4_TEST
