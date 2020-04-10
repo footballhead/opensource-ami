@@ -528,3 +528,7 @@ cp _dump_/_minisets_/catacombs/alpha4_l4ustairs.tmx    _assets_/_minisets_/catac
 cp _dump_/_minisets_/catacombs/alpha4_l4dstairs.tmx    _assets_/_minisets_/catacombs/hell_stairs_down.tmx
 
 fi # ALPHA4_TEST
+
+# === [ Towners ] ==============================================================
+
+./copy_towner_assets.sh
