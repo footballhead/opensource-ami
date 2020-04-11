@@ -6,6 +6,56 @@ mkdir -p _assets_/towners
 
 # --- [ Griswold the Blacksmith ] ----------------------------------------------
 
+# Actions:
+#
+#    stand: towners/smith/smithn/*.png
+#    walk: towners/smith/smithw/smithw_{0,1,2,3,4,5,6,7}/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (SW): 16 frames
+#    * walk  (S):   8 frames
+#    * walk  (SW):  8 frames
+#    * walk  (W):   8 frames
+#    * walk  (NW):  8 frames
+#    * walk  (N):   8 frames
+#    * walk  (NE):  8 frames
+#    * walk  (E):   8 frames
+#    * walk  (SE):  8 frames
+
+# Directions:
+#
+#    S  (smithw_0)
+#    SW (smithw_1)
+#    W  (smithw_2)
+#    NW (smithw_3)
+#    N  (smithw_4)
+#    NE (smithw_5)
+#    E  (smithw_6)
+#    SE (smithw_7)
+
+# width: 96
+# nframes (stand): 16
+# nframes (walk): 8
+
+# total frames: 16 + 8*8 = 80
+
+echo 'Extracting graphics for "Griswold the Blacksmith"'
+montage \
+	_dump_/towners/smith/smithn/*.png \
+	_dump_/towners/smith/smithw/smithw_0/*.png \
+	_dump_/towners/smith/smithw/smithw_1/*.png \
+	_dump_/towners/smith/smithw/smithw_2/*.png \
+	_dump_/towners/smith/smithw/smithw_3/*.png \
+	_dump_/towners/smith/smithw/smithw_4/*.png \
+	_dump_/towners/smith/smithw/smithw_5/*.png \
+	_dump_/towners/smith/smithw/smithw_6/*.png \
+	_dump_/towners/smith/smithw/smithw_7/*.png \
+	-gravity south -geometry 96x+0+0 \
+	-tile 8x \
+	-background none \
+	_assets_/towners/griswold.png
+
 # --- [ Pepin the Healer ] -----------------------------------------------------
 
 # --- [ Wounded Townsman ] -----------------------------------------------------
