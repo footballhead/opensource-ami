@@ -35,6 +35,7 @@ mkdir -p _assets_/towners
 #    SE (smithw_7)
 
 # width: 96
+# height: 96
 # nframes (stand): 16
 # nframes (walk): 8
 
@@ -62,10 +63,18 @@ montage \
 
 # Actions:
 #
-#    stand
+#    stand: towners/butch/deadguy/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (N): 8 frames
 
 # width: 96
-# nframes: 8
+# height: 96
+# nframes (stand): 8
+# TODO: split stand and death anim.
+
+# total frames: 8
 
 echo 'Extracting graphics for "Wounded Townsman"'
 montage \
@@ -106,6 +115,7 @@ montage \
 #    SE (twnfw_7)
 
 # width: 96
+# height: 96
 # nframes (stand): 16
 # nframes (walk): 8
 
@@ -139,9 +149,10 @@ montage \
 
 # Animation order in spritesheet:
 #
-#    * stand (SW): 19 frames
+#    * stand (S): 19 frames
 
 # width: 96
+# height: 96
 # nframes (stand): 19
 
 # total frames: 19
@@ -185,6 +196,7 @@ montage \
 #    SE (wmnw_7)
 
 # width: 96
+# height: 96
 # nframes (stand): 18
 # nframes (walk): 8
 
@@ -208,11 +220,44 @@ montage \
 
 # --- [ Wirt the Peg-legged boy ] ----------------------------------------------
 
+# Actions:
+#
+#    stand: towners/townboy/pegkid1/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (S): 20 frames
+
+# width: 96
+# height: 64
+# nframes (stand): 20
+
+# total frames: 20
+
+echo 'Extracting graphics for "Wirt the Peg-legged boy"'
+montage \
+	_dump_/towners/townboy/pegkid1/*.png \
+	-gravity south -geometry 96x+0+0 \
+	-tile 5x \
+	-background none \
+	_assets_/towners/wirt.png
+
 # --- [ Cow ] ------------------------------------------------------------------
 
 # Actions:
 #
-#    stand
+#    stand: towners/animals/cow/cow_{0,1,2,3,4,5,6,7}/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (S):  12 frames
+#    * stand (SW): 12 frames
+#    * stand (W):  12 frames
+#    * stand (NW): 12 frames
+#    * stand (N):  12 frames
+#    * stand (NE): 12 frames
+#    * stand (E):  12 frames
+#    * stand (SE): 12 frames
 
 # Directions:
 #
@@ -226,7 +271,10 @@ montage \
 #    SE (cow_7)
 
 # width: 128
-# nframes: 12
+# height: 128
+# nframes (stand): 12
+
+# total frames: 8*12 = 96
 
 echo 'Extracting graphics for "Cow"'
 montage \
