@@ -133,6 +133,27 @@ montage \
 
 # --- [ Adria the Witch ] ------------------------------------------------------
 
+# Actions:
+#
+#    stand: towners/townwmn1/witch/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (SW): 19 frames
+
+# width: 96
+# nframes (stand): 19
+
+# total frames: 19
+
+echo 'Extracting graphics for "Adria the Witch"'
+montage \
+	_dump_/towners/townwmn1/witch/*.png \
+	-gravity south -geometry 96x+0+0 \
+	-tile 19x \
+	-background none \
+	_assets_/towners/adria.png
+
 # --- [ Gillian the Barmaid ] --------------------------------------------------
 
 # Actions:
