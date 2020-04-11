@@ -27,6 +27,56 @@ montage \
 
 # --- [ Ogden the Tavern owner ] -----------------------------------------------
 
+# Actions:
+#
+#    stand: towners/twnf/twnfn/*.png
+#    walk: towners/twnf/twnfw/twnfw_{0,1,2,3,4,5,6,7}/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (SW): 16 frames
+#    * walk  (S):   8 frames
+#    * walk  (SW):  8 frames
+#    * walk  (W):   8 frames
+#    * walk  (NW):  8 frames
+#    * walk  (N):   8 frames
+#    * walk  (NE):  8 frames
+#    * walk  (E):   8 frames
+#    * walk  (SE):  8 frames
+
+# Directions:
+#
+#    S  (twnfw_0)
+#    SW (twnfw_1)
+#    W  (twnfw_2)
+#    NW (twnfw_3)
+#    N  (twnfw_4)
+#    NE (twnfw_5)
+#    E  (twnfw_6)
+#    SE (twnfw_7)
+
+# width: 96
+# nframes (stand): 16
+# nframes (walk): 8
+
+# total frames: 16 + 8*8 = 80
+
+echo 'Extracting graphics for "Ogden the Tavern owner"'
+montage \
+	_dump_/towners/twnf/twnfn/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_0/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_1/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_2/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_3/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_4/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_5/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_6/*.png \
+	_dump_/towners/twnf/twnfw/twnfw_7/*.png \
+	-gravity south -geometry 96x+0+0 \
+	-tile 8x \
+	-background none \
+	_assets_/towners/ogden.png
+
 # --- [ Cain the Elder ] -------------------------------------------------------
 
 # --- [ Farnham the Drunk ] ----------------------------------------------------
