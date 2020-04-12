@@ -59,6 +59,28 @@ montage \
 
 # --- [ Pepin the Healer ] -----------------------------------------------------
 
+# Actions:
+#
+#    stand: towners/healer/healer/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (SE): 20 frames
+
+# width: 96
+# height: 96
+# nframes (stand): 20
+
+# total frames: 20
+
+echo 'Extracting graphics for "Pepin the Healer"'
+montage \
+	_dump_/towners/healer/healer/*.png \
+	-gravity south -geometry 96x+0+0 \
+	-tile 5x \
+	-background none \
+	_assets_/towners/pepin.png
+
 # --- [ Wounded Townsman ] -----------------------------------------------------
 
 # Actions:
@@ -312,3 +334,7 @@ montage \
 	-tile 12x \
 	-background none \
 	_assets_/towners/cow.png
+
+# --- [ Dark Priest ] ----------------------------------------------------------
+
+# TODO: dump graphics of dark priest.
