@@ -139,6 +139,28 @@ montage \
 
 # --- [ Cain the Elder ] -------------------------------------------------------
 
+# Actions:
+#
+#    stand: towners/strytell/strytell/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (S): 25 frames
+
+# width: 96
+# height: 96
+# nframes (stand): 25
+
+# total frames: 25
+
+echo 'Extracting graphics for "Cain the Elder"'
+montage \
+	_dump_/towners/strytell/strytell/*.png \
+	-gravity south -geometry 96x+0+0 \
+	-tile 5x \
+	-background none \
+	_assets_/towners/cain.png
+
 # --- [ Farnham the Drunk ] ----------------------------------------------------
 
 # --- [ Adria the Witch ] ------------------------------------------------------
