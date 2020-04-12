@@ -185,6 +185,28 @@ montage \
 
 # --- [ Farnham the Drunk ] ----------------------------------------------------
 
+# Actions:
+#
+#    stand: towners/drunk/twndrunk/*.png
+
+# Animation order in spritesheet:
+#
+#    * stand (SE): 18 frames
+
+# width: 96
+# height: 96
+# nframes (stand): 18
+
+# total frames: 18
+
+echo 'Extracting graphics for "Farnham the Drunk"'
+montage \
+	_dump_/towners/drunk/twndrunk/*.png \
+	-gravity south -geometry 96x+0+0 \
+	-tile 6x \
+	-background none \
+	_assets_/towners/farnham.png
+
 # --- [ Adria the Witch ] ------------------------------------------------------
 
 # Actions:
