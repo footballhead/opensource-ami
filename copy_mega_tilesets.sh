@@ -10,7 +10,7 @@ echo 'Creating "_assets_/_mega_tilesets_/tristram.png"'
 montage \
 	_dump_/_tiles_/town/town.pal/*.png \
 	-gravity south -geometry 128x+0+0 \
-	-tile 19x \
+	-tile 32x \
 	-background none \
 	_assets_/_mega_tilesets_/tristram.png
 
@@ -20,7 +20,7 @@ echo 'Creating "_assets_/_mega_tilesets_/cathedral.png"'
 montage \
 	_dump_/_tiles_/l1/l1_1.pal/*.png \
 	-gravity south -geometry 128x+0+0 \
-	-tile 23x \
+	-tile 16x \
 	-background none \
 	_assets_/_mega_tilesets_/cathedral.png
 
@@ -40,7 +40,7 @@ echo 'Creating "_assets_/_mega_tilesets_/caves.png"'
 montage \
 	_dump_/_tiles_/l3/l3_1.pal/*.png \
 	-gravity south -geometry 128x+0+0 \
-	-tile 13x \
+	-tile 16x \
 	-background none \
 	_assets_/_mega_tilesets_/caves.png
 
@@ -50,6 +50,6 @@ echo 'Creating "_assets_/_mega_tilesets_/hell.png"'
 montage \
 	_dump_/_tiles_/l4/l4_1.pal/*.png \
 	-gravity south -geometry 128x+0+0 \
-	-tile 23x \
+	-tile 16x \
 	-background none \
 	_assets_/_mega_tilesets_/hell.png
