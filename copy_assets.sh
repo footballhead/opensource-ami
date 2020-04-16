@@ -16,6 +16,10 @@ cp _dump_/_tilesets_/catacombs.png _assets_/_tilesets_/
 cp _dump_/_tilesets_/caves.png     _assets_/_tilesets_/
 cp _dump_/_tilesets_/hell.png      _assets_/_tilesets_/
 
+# --- [ Mega tilesets ] --------------------------------------------------------
+
+./copy_mega_tilesets.sh
+
 # === [ TMX maps ] =============================================================
 
 # --- [ Tristram ] -------------------------------------------------------------
