@@ -18,7 +18,7 @@ cp _dump_/_tilesets_/hell.png      _assets_/_tilesets_/
 
 # --- [ Mega tilesets ] --------------------------------------------------------
 
-./copy_mega_tilesets.sh
+./convert_mega_tilesets.sh
 
 # === [ TMX maps ] =============================================================
 
