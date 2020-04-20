@@ -40,11 +40,15 @@ _dump_/_dpieces_/town/town.pal/dpiece_1258.png: diabdat
 
 # TIL files (tiles).
 
-dump_tils: _dump_/_tiles_/town/town.pal/tile_0342.png
+dump_tils: _dump_/_tiles_/town/town.pal/tile_0342.png _dump_/_tiles_special_/town/town.pal/tile_0342.png
 
 _dump_/_tiles_/town/town.pal/tile_0342.png: diabdat
 	@echo "===> Extracting TIL files."
 	til_dump -a
+
+_dump_/_tiles_special_/town/town.pal/tile_0342.png: diabdat
+	@echo "===> Extracting TIL files with special tileset."
+	til_dump -a -special
 
 # DUN files (set level dungeon maps).
 
